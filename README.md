@@ -1,2 +1,1 @@
-# php-ci
-CodeCluster open source developments
+# CodeCluster php-ci
