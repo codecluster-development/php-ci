@@ -19,11 +19,13 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     libpng-dev \
     libicu-dev \
     libonig-dev \
+    libgmp-dev \
     zip \
     libzip-dev \
     $PHPIZE_DEPS \
     sudo \
 # configure extensions
+    && docker-php-ext-configure gmp \
     && docker-php-ext-configure zip \
     && docker-php-ext-configure intl --enable-intl \
     && docker-php-ext-configure gd \

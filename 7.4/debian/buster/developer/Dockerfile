@@ -23,12 +23,14 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" && \
     libonig-dev \
     zip \
     libzip-dev \
+    libgmp-dev \
     $PHPIZE_DEPS \
     nano \
     git \
     openssh-client \
     sudo \
 # configure extensions
+    && docker-php-ext-configure gmp \
     && docker-php-ext-configure intl --enable-intl \
     && docker-php-ext-configure gd \
 # install extensions
