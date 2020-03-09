@@ -41,6 +41,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     opcache \
     pcntl \
     sockets \
+    gmp \
 # configure stuff
     && a2enmod rewrite \
     && echo "ServerName localhost" >> /etc/apache2/apache2.conf \

@@ -40,6 +40,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     opcache \
     pcntl \
     sockets \
+    gmp \
 # cleanup
     && docker-php-source delete \
     && apt purge -y \

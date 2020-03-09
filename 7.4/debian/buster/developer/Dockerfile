@@ -45,6 +45,7 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" && \
     opcache \
     pcntl \
     sockets \
+    gmp \
 # pecl extensions
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
