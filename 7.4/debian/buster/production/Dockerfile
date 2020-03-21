@@ -24,6 +24,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     libzip-dev \
     $PHPIZE_DEPS \
     sudo \
+    libxml2-dev \
 # configure extensions
     && docker-php-ext-configure gmp \
     && docker-php-ext-configure intl --enable-intl \
@@ -43,6 +44,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     pcntl \
     sockets \
     gmp \
+    soap \
 # cleanup
     && docker-php-source delete \
     && apt purge -y \

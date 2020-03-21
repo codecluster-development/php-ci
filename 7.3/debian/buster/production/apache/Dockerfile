@@ -22,6 +22,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     libzip-dev \
     $PHPIZE_DEPS \
     sudo \
+    libxml2-dev \
 # configure extensions
     && docker-php-ext-configure zip \
     && docker-php-ext-configure intl --enable-intl \
@@ -40,6 +41,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     opcache \
     pcntl \
     sockets \
+    soap \
 # configure stuff
     && a2enmod rewrite \
     && echo "ServerName localhost" >> /etc/apache2/apache2.conf \

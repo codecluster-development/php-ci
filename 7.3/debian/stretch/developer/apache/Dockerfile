@@ -27,6 +27,7 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" && \
     git \
     openssh-client \
     sudo \
+    libxml2-dev \
 # configure extensions
     && docker-php-ext-configure intl --enable-intl \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
@@ -44,6 +45,7 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" && \
     opcache \
     pcntl \
     sockets \
+    soap \
 # pecl extensions
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \

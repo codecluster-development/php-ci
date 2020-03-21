@@ -24,6 +24,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     libzip-dev \
     $PHPIZE_DEPS \
     sudo \
+    libxml2-dev \
 # configure extensions
     && docker-php-ext-configure gmp \
     && docker-php-ext-configure zip \
@@ -44,6 +45,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     pcntl \
     sockets \
     gmp \
+    soap \
 # configure stuff
     && a2enmod rewrite \
     && echo "ServerName localhost" >> /etc/apache2/apache2.conf \
