@@ -23,6 +23,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     $PHPIZE_DEPS \
     sudo \
     libxml2-dev \
+    libpq-dev \
 # configure extensions
     && docker-php-ext-configure zip \
     && docker-php-ext-configure intl --enable-intl \
@@ -33,7 +34,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     intl \
     curl \
     json \
-    pdo_mysql \
+    pdo_pgsql \
     exif \
     zip \
     gd \

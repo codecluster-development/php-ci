@@ -28,6 +28,7 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" && \
     openssh-client \
     sudo \
     libxml2-dev \
+    libpq-dev \
 # configure extensions
     && docker-php-ext-configure intl --enable-intl \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
@@ -37,7 +38,7 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" && \
     intl \
     curl \
     json \
-    pdo_mysql \
+    pdo_pgsql \
     exif \
     zip \
     gd \
