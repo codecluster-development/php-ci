@@ -29,7 +29,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     && docker-php-ext-configure gmp \
     && docker-php-ext-configure zip \
     && docker-php-ext-configure intl --enable-intl \
-    && docker-php-ext-configure gd \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
 # install extensions
     && docker-php-ext-install \
     mbstring \
